@@ -2,7 +2,7 @@ type Labels = {
 	[label: string]: number;
 };
 
-type InstructionInfo = {
+export type InstructionInfo = {
 	lineNumber: number;
 	address: number;
 	raw: string;
@@ -13,16 +13,16 @@ type SourceMap = {
 	labels: Labels;
 };
 
-type Instruction = {
+export type Instruction = {
 	opCode: string;
 	args: string[];
 };
 
-type DebugInfo = {
+export type DebugInfo = {
 	[address: number]: InstructionInfo;
 };
 
-type Target = {
+export type Target = {
 	exe: Uint8Array;
 	pdb: DebugInfo;
 };

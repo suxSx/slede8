@@ -48,11 +48,20 @@ function load(executable: Uint8Array) {
 	return memory;
 }
 
+export type State = {
+	pc: number;
+	flag: boolean;
+	regs: Uint8Array;
+	memory: Uint8Array;
+	stdout: Uint8Array;
+	inputPtr: number;
+};
+
 export function* step(
 	executable: Uint8Array,
 	stdin: Uint8Array,
 	maxTicks = 1000
-) {
+): Generator<State, State> {
 	let inputPtr = 0;
 	let tick = 0;
 

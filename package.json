@@ -4,9 +4,10 @@
   "description": "🛷🛷🛷🛷🛷🛷🛷🛷",
   "main": "lib/index.js",
   "module": "lib/index.mjs",
-  "types": "lib/index.d.ts",
+  "types": "index.d.ts",
   "files": [
-    "lib/"
+    "lib/",
+    "*.d.ts"
   ],
   "author": "PST",
   "license": "MIT",
